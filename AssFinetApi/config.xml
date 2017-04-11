@@ -1,0 +1,6 @@
+<Selection context = '//T_NEW_CATALOG/PRODUCT' >
+<Entry from='SUPPLIER_PID' to='Id' />
+<Entry from = 'PRODUCT_DETAILS/*' />
+<Entry from='PRODUCT_ORDER_DETAILS/ORDER_UNIT' />
+<Entry from = "PRODUCT_PRICE_DETAILS/PRODUCT_PRICE[@price_type='']/PRICE_AMOUNT" to='PriceAmountDefault' />
+</Selection>

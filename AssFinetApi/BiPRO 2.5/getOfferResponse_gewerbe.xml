@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tarifierung:getOfferResponse
+    xmlns:vertrag-prozesse="http://www.bipro.net/namespace/vertrag-prozesse"
+    xmlns:partner="http://www.bipro.net/namespace/partner"
+    xmlns:allgemein="http://www.bipro.net/namespace/allgemein"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:datentypen="http://www.bipro.net/namespace/datentypen"
+    xmlns:haftpflicht="http://www.bipro.net/namespace/versicherung/haftpflicht"
+    xmlns:sachen="http://www.bipro.net/namespace/sachen"
+    xmlns:tarifierung="http://www.bipro.net/namespace/versicherung/tarifierung"
+    xmlns:komposit="http://www.bipro.net/namespace/versicherung/produktmodell/komposit"
+    xmlns:nachrichten="http://www.bipro.net/namespace/nachrichten"
+    xmlns:gevo="http://www.bipro.net/namespace/gevo"
+    xmlns:produktmodell="http://www.bipro.net/namespace/produktmodell"
+    xmlns:sach="http://www.bipro.net/namespace/versicherung/sach"
+    xsi:schemaLocation="http://www.bipro.net/namespace/tarifierung bipro/concenter/GewerbeService/GewerbeService_2.5.1.1.0.xsd">
+    <tarifierung:Response>
+        <nachrichten:BiPROVersion>2.5.1.1.0</nachrichten:BiPROVersion>
+        <nachrichten:ConsumerID/>
+        <nachrichten:Status>
+            <nachrichten:ProzessID>123_123_123</nachrichten:ProzessID>
+            <nachrichten:Zeitstempel>2013-01-01T00:00:00</nachrichten:Zeitstempel>
+            <nachrichten:StatusID>OK</nachrichten:StatusID>
+            <nachrichten:Schwebe>true</nachrichten:Schwebe>
+            <nachrichten:Meldung>
+                <nachrichten:ArtID>Hinweis</nachrichten:ArtID>
+                <nachrichten:MeldungID>99999</nachrichten:MeldungID>
+                <nachrichten:Text>Vorbelegungen wurden erfolgreich übertragen!</nachrichten:Text>
+            </nachrichten:Meldung>
+        </nachrichten:Status>
+        <tarifierung:Angebot>
+            <gevo:Vorgangsnummer>ActurisNumber</gevo:Vorgangsnummer>
+            <gevo:VorgangsnummerVM>AssfinetNumber</gevo:VorgangsnummerVM>
+            <gevo:Erstelldatum>2011-05-01T00:00:00</gevo:Erstelldatum>
+
+            <gevo:Vermittler>
+                <allgemein:Vermittlernummer>0550000000</allgemein:Vermittlernummer>
+                <allgemein:VermittlernummerVM>0550000000</allgemein:VermittlernummerVM>
+                <allgemein:PartnerID>68c45811-9ccb-470f-a43d-b86082a4959c</allgemein:PartnerID>
+                <allgemein:Vermittlerrolle>
+                    <allgemein:ArtID>03</allgemein:ArtID>
+                    <allgemein:Vermittlertyp>01</allgemein:Vermittlertyp>
+                </allgemein:Vermittlerrolle>
+            </gevo:Vermittler>
+
+            <tarifierung:Zahlungsart>2</tarifierung:Zahlungsart>
+
+            <tarifierung:Partner xsi:type="partner:CT_JuristischePerson">
+                <partner:Name>Donald Trump Inc</partner:Name>
+                <partner:PartnernummerVM>DEMO-0000000557</partner:PartnernummerVM>
+                <partner:PartnerID>Customer1</partner:PartnerID>
+                <partner:Anschrift>
+                    <allgemein:Strasse>Trump Street. 5</allgemein:Strasse>
+                    <allgemein:Postleitzahl>5555</allgemein:Postleitzahl>
+                    <allgemein:Ort>Brunohausen</allgemein:Ort>
+                </partner:Anschrift>
+                <partner:Kommunikationsverbindung>
+                    <partner:ArtID>20</partner:ArtID>
+                    <partner:Kommunikationsadresse>+49 5555 555555</partner:Kommunikationsadresse>
+                </partner:Kommunikationsverbindung>
+                <partner:Kommunikationsverbindung>
+                    <partner:ArtID>50</partner:ArtID>
+                    <partner:Kommunikationsadresse>Trump@entenhausen.de</partner:Kommunikationsadresse>
+                </partner:Kommunikationsverbindung>
+            </tarifierung:Partner>
+
+            <tarifierung:Partner xsi:type="partner:CT_JuristischePerson">
+                <partner:Name>Bruno Vermittler</partner:Name>
+                <partner:PartnernummerVM>DEMO-0000000717</partner:PartnernummerVM>
+                <partner:PartnerID>68c45811-9ccb-470f-a43d-b86082a4959c</partner:PartnerID>
+                <partner:Anschrift>
+                    <allgemein:Strasse>Brunostr. 5</allgemein:Strasse>
+                    <allgemein:Postleitzahl>2222</allgemein:Postleitzahl>
+                    <allgemein:Ort>New York</allgemein:Ort>
+                </partner:Anschrift>
+                <partner:Kommunikationsverbindung>
+                    <partner:ArtID>20</partner:ArtID>
+                    <partner:Kommunikationsadresse>+49 5555 555555</partner:Kommunikationsadresse>
+                </partner:Kommunikationsverbindung>
+                <partner:Kommunikationsverbindung>
+                    <partner:ArtID>50</partner:ArtID>
+                    <partner:Kommunikationsadresse>bruno@bruno.de</partner:Kommunikationsadresse>
+                </partner:Kommunikationsverbindung>
+            </tarifierung:Partner>
+
+            <tarifierung:Versicherungsnehmer>
+                <partner:PartnerID>Customer1</partner:PartnerID>
+            </tarifierung:Versicherungsnehmer>
+
+            <tarifierung:Verkaufsprodukt>
+
+                <produktmodell:GewuenschteZahlungsweise>2</produktmodell:GewuenschteZahlungsweise>
+
+                <produktmodell:Unternehmen>
+                    <allgemein:Nummer>5515</allgemein:Nummer>
+                    <allgemein:Name>AXA</allgemein:Name>
+                    <allgemein:Nummernart>BaFin</allgemein:Nummernart>
+                </produktmodell:Unternehmen>
+
+                <produktmodell:Beitrag>
+                    <produktmodell:ArtID xsi:type="datentypen:STE_BeitragBasis">02</produktmodell:ArtID>
+                    <produktmodell:Betrag>
+                        <allgemein:Betrag>305.11</allgemein:Betrag>
+                        <allgemein:Waehrung>EUR</allgemein:Waehrung>
+                    </produktmodell:Betrag>
+
+                    <produktmodell:Zahlungsweise>1</produktmodell:Zahlungsweise>
+                    <produktmodell:Steuer>
+                        <produktmodell:ArtID>1</produktmodell:ArtID>
+                        <produktmodell:Satz>19.00</produktmodell:Satz>
+                    </produktmodell:Steuer>
+                </produktmodell:Beitrag>
+
+                <produktmodell:Versicherungsdauer>
+                    <allgemein:Beginn>2013-07-01T23:59</allgemein:Beginn>
+                    <allgemein:Ende>2013-07-01T23:59</allgemein:Ende>
+                </produktmodell:Versicherungsdauer>
+
+                <produktmodell:Produkt xsi:type="komposit:CT_SUHVersicherung">
+                    <produktmodell:Beitrag>
+                        <produktmodell:ArtID xsi:type="datentypen:STE_BeitragBasis">02</produktmodell:ArtID>
+                        <produktmodell:Betrag>
+                            <allgemein:Betrag>305.11</allgemein:Betrag>
+                            <allgemein:Waehrung>EUR</allgemein:Waehrung>
+                        </produktmodell:Betrag>
+
+                        <produktmodell:Zahlungsweise>1</produktmodell:Zahlungsweise>
+                        <produktmodell:Steuer>
+                            <produktmodell:ArtID>1</produktmodell:ArtID>
+                            <produktmodell:Satz>19.00</produktmodell:Satz>
+                        </produktmodell:Steuer>
+                    </produktmodell:Beitrag>
+                    <produktmodell:Versicherungsdauer>
+                        <allgemein:Beginn>2013-07-01T23:59</allgemein:Beginn>
+                        <allgemein:Ende>2013-07-01T23:59</allgemein:Ende>
+                    </produktmodell:Versicherungsdauer>
+
+                    <produktmodell:Sparte>040</produktmodell:Sparte>
+
+                    <produktmodell:Elementarprodukt xsi:type="komposit:CT_Deckung">
+                        <komposit:ArtID xsi:type="datentypen:STE_DeckungBasis">0401</komposit:ArtID>
+
+                        <komposit:VersichertesWagnis>
+                            <allgemein:AktivitaetID>HPVAktivitaet1</allgemein:AktivitaetID>
+                        </komposit:VersichertesWagnis>
+                    </produktmodell:Elementarprodukt>
+
+                </produktmodell:Produkt>
+
+                <produktmodell:Produkt xsi:type="komposit:CT_SUHVersicherung">
+                    <produktmodell:Beitrag>
+                        <produktmodell:ArtID xsi:type="datentypen:STE_BeitragBasis">02</produktmodell:ArtID>
+                        <produktmodell:Betrag>
+                            <allgemein:Betrag>305.11</allgemein:Betrag>
+                            <allgemein:Waehrung>EUR</allgemein:Waehrung>
+                        </produktmodell:Betrag>
+
+                        <produktmodell:Zahlungsweise>1</produktmodell:Zahlungsweise>
+                        <produktmodell:Steuer>
+                            <produktmodell:ArtID>1</produktmodell:ArtID>
+                            <produktmodell:Satz>19.00</produktmodell:Satz>
+                        </produktmodell:Steuer>
+                    </produktmodell:Beitrag>
+                    <produktmodell:Versicherungsdauer>
+                        <allgemein:Beginn>2013-07-01T23:59</allgemein:Beginn>
+                        <allgemein:Ende>2013-07-01T23:59</allgemein:Ende>
+                    </produktmodell:Versicherungsdauer>
+
+                    <produktmodell:Sparte>081</produktmodell:Sparte>
+
+                    <produktmodell:Elementarprodukt xsi:type="komposit:CT_Deckung">
+                        <komposit:ArtID xsi:type="datentypen:STE_DeckungBasis">0810</komposit:ArtID>
+
+                        <komposit:VersichertesObjekt>
+                            <allgemein:GegenstandID>OBJEKT1</allgemein:GegenstandID>
+                        </komposit:VersichertesObjekt>
+                    </produktmodell:Elementarprodukt>
+
+                </produktmodell:Produkt>
+
+            </tarifierung:Verkaufsprodukt>
+
+            <tarifierung:Aktivitaet xsi:type="haftpflicht:CT_Haftpflichtwagnis">
+                <allgemein:AktivitaetID>HPVAktivitaet1</allgemein:AktivitaetID>
+                <haftpflicht:Wagnisart xsi:type="datentypen:STE_WagnisartBasis">8008</haftpflicht:Wagnisart>
+                <haftpflicht:Berechnungseinheit>006</haftpflicht:Berechnungseinheit>
+                <haftpflicht:Bauherren>
+                    <haftpflicht:Wagnisanschrift>
+                        <allgemein:Strasse>Weg 12f</allgemein:Strasse>
+                        <allgemein:Postleitzahl>54321</allgemein:Postleitzahl>
+                        <allgemein:Ort>Samplehausen</allgemein:Ort>
+                        <allgemein:Land>D</allgemein:Land>
+                    </haftpflicht:Wagnisanschrift>
+                </haftpflicht:Bauherren>
+            </tarifierung:Aktivitaet>
+
+            <tarifierung:Gegenstand xsi:type="sachen:CT_Gebaeude">
+                <allgemein:GegenstandID>OBJEKT1</allgemein:GegenstandID>
+                <allgemein:ZusaetzlicheGegenstandsdaten xsi:type="sach:CT_HausratEinflussfaktoren">
+                    <sach:Wohnflaeche>100</sach:Wohnflaeche>
+                </allgemein:ZusaetzlicheGegenstandsdaten>
+
+                <sachen:Bauartklasse>1</sachen:Bauartklasse>
+                <sachen:Objektanschrift>
+                    <allgemein:Postleitzahl>60311</allgemein:Postleitzahl>
+                </sachen:Objektanschrift>
+            </tarifierung:Gegenstand>
+
+            <tarifierung:VorNebenVersicherung>
+                <Verkaufsprodukt xmlns="http://www.bipro.net/namespace/vertrag">
+                    <!-- just XSD validation @see Versicherungsscheinnummer -->
+                    <produktmodell:Produkt/>
+                </Verkaufsprodukt>
+                <Vertragsnummer xmlns="http://www.bipro.net/namespace/vertrag">
+                    <allgemein:Versicherungsscheinnummer>LALA234234</allgemein:Versicherungsscheinnummer>
+                </Vertragsnummer>
+            </tarifierung:VorNebenVersicherung>
+
+            <tarifierung:Beitragszahler>
+                <partner:PartnerID>008a87f7-06d2-4763-831b-1fe766f2e71a</partner:PartnerID>
+            </tarifierung:Beitragszahler>
+
+        </tarifierung:Angebot>
+    </tarifierung:Response>
+</tarifierung:getOfferResponse>
