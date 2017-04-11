@@ -1,0 +1,9 @@
+<!--Config file with Xpath-->
+  <Selection context = '/*/*/*[name()="tarifierung:Partner"]/*[name()="partner:PartnerID"]' key='/*/*/*[name()="tarifierung:Versicherungsnehmer"]/*[name()="partner:PartnerID"]'>
+	<Entry from='../*[name()="partner:PartnerID"]' to='PartnerID' />
+	<Entry from='../*[name()="partner:Name"]' to='Name' />
+	<Entry from='../*[name()="partner:PartnernummerVM"]' to='PartnernummerVM' />
+	<Entry from='../*/*[name()="allgemein:Strasse"]' to='Strasse' />
+	<Entry from='../*/*[name()="allgemein:Postleitzahl"]' to='Postleitzahl' />
+	<Entry from='../*/*[name()="allgemein:Ort"]' to='Ort' />
+</Selection>

@@ -19,62 +19,42 @@ namespace AssFinetApi.Controllers
     public class XmlValidatorController : ApiController
     {
 
-        //[Route( "" )]
-        //public object Geti() {
-        //    //return XmlHelper.GetConfigValue();
-        //    var partners = new object[100];
-        //    using( var conn = new SqlConnection( getConnectionString() ) ) {
-        //        conn.Open();
-        //        var cmd = new SqlCommand( "SELECT PartnerID, Name, Postleitzahl, Ort, PartnerID, PartnernummerVM, Strasse From Partner", conn );
-        //        using( var oReader = cmd.ExecuteReader() )
-        //        {
-        //            int i = 0;
-        //            while( oReader.Read() ) {
-        //                object partner = new {
-        //                    PartnerID = oReader["PartnerID"].ToString(),
-        //                    Name = oReader["Name"].ToString(),
-        //                    Postleitzahl = oReader["Postleitzahl"],
-        //                    Ort = oReader["Ort"].ToString(),
-        //                    PartnernummerVM = oReader["PartnernummerVM"].ToString(),
-        //                    Strasse = oReader["Strasse"].ToString()
-        //                };
-        //                partners[i] = partner;
-        //                i++;
-        //            }
-        //        }
-        //    }
-        //    return partners;
-        //}
-
-        // string strasse, string postleitzahl, string ort, string kommunikationsadresse
         [Route( "" )]
-        public List<Partner> Get() {
+        public List<Partner> Get()
+        {
             //return XmlHelper.GetConfigValue();
+            return generatePartnerList();
+        }
+
+        static List<Partner> generatePartnerList()
+        {
             var partners = new List<Partner>();
-            using( var conn = new SqlConnection( getConnectionString() ) ) {
+            using (var conn = new SqlConnection( getConnectionString() ))
+            {
                 conn.Open();
-                var cmd = new SqlCommand( "SELECT PartnerID, Name, Postleitzahl, Ort, PartnerID, PartnernummerVM, Strasse From Partner", conn );
-                using( var oReader = cmd.ExecuteReader() ) {
-                    while( oReader.Read() )
+                var cmd =
+                    new SqlCommand(
+                        "SELECT PartnerID, Name, Postleitzahl, Ort, PartnerID, PartnernummerVM, Strasse From Partner", conn );
+                using (var oReader = cmd.ExecuteReader())
+                {
+                    while (oReader.Read())
                     {
-                        Partner partner = new Partner( 
+                        Partner partner = new Partner(
                             oReader["PartnerID"].ToString(), oReader["Name"].ToString(),
-                            oReader["PartnernummerVM"].ToString(), oReader["Strasse"].ToString(), 
+                            oReader["PartnernummerVM"].ToString(), oReader["Strasse"].ToString(),
                             oReader["Postleitzahl"].ToString(), oReader["Ort"].ToString(), "" );
-                            partners.Add( partner );
+                        partners.Add( partner );
                     }
                 }
             }
             return partners;
         }
 
-
-
-
         [Route( "{id:int}" )]
-        public object Get( int id )
+        public Partner Get( int id )
         {
-            return new { name = "" + id, link = "a"};
+            List<Partner> partners = generatePartnerList();
+            return partners.ElementAt( id );
         }
 
         [Route( "" )]

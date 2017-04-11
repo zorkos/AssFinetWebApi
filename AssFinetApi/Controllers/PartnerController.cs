@@ -16,8 +16,6 @@ namespace AssFinetApi.Controllers
                 return BadRequest( ModelState );
 
             //db.PersonalDetails.Add( personaldetails );
-
-
             //return CreatedAtRoute( "DefaultApi", new { id = personaldetails.AutoId }, personaldetails );
             return null;
         }

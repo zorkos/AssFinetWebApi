@@ -1,0 +1,10 @@
+Head: http://localhost:27068/Api/XmlValidator/
+
+Body:
+{
+	
+"FilePath":"C:\\Users\\zk\\Documents\\GitHub\\AssFinetWebApi\\AssFinetApi\\BiPRO 2.5\\getOfferResponse_gewerbe.xml",
+	
+"Xpath":"C:\\Users\\zk\\Documents\\GitHub\\AssFinetWebApi\\AssFinetApi\\BiPRO 2.5\\config.xml"
+
+}
